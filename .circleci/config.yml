@@ -1,0 +1,46 @@
+version: 2.1
+
+executors:
+  java-executor:
+    docker:
+      - image: cimg/openjdk:8.0
+
+jobs:
+  build-and-deploy-backend:
+    executor: java-executor
+    steps:
+      - checkout
+
+      - run:
+          name: Make mvnw executable
+          command: chmod +x ./mvnw
+
+      - run:
+          name: Add EC2 Host to known_hosts
+          command: |
+            mkdir -p ~/.ssh
+            echo "EC2_PUBLIC_DNS: $EC2_PUBLIC_DNS"
+            ssh-keyscan -H "$EC2_PUBLIC_DNS" >> ~/.ssh/known_hosts || { echo "❌ ssh-keyscan failed. Check EC2_PUBLIC_DNS." >&2; exit 1; }
+
+      - run:
+          name: Package Spring Boot application (Java 8)
+          command: ./mvnw clean package -DskipTests
+
+      - run:
+          name: Deploy backend to EC2
+          command: |
+            scp target/*.jar $EC2_USERNAME@$EC2_PUBLIC_DNS:/home/ubuntu/
+
+            ssh $EC2_USERNAME@$EC2_PUBLIC_DNS \<< EOF
+              export OPENAI_API_KEY="$OPENAI_API_KEY"
+              echo $OPENAI_API_KEY
+              pkill -f 'java -jar' || true
+              nohup java -jar /home/ubuntu/*.jar > /home/ubuntu/app.log 2>&1 &
+              sudo systemctl reload nginx
+            EOF
+
+workflows:
+  version: 2
+  deploy:
+    jobs:
+      - build-and-deploy-backend

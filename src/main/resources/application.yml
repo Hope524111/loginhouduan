@@ -1,0 +1,52 @@
+server:
+  address: 0.0.0.0
+  port: 8080
+  tomcat:
+    max-swallow-size: 100MB
+    basedir: ./uploads
+
+spring:
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+
+  mail:
+    host: ${MAIL_HOST}
+    port: ${MAIL_PORT}
+    username: ${MAIL_USERNAME}
+    password: ${MAIL_PASSWORD}
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: false
+
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 100MB
+      max-request-size: 100MB
+
+  web:
+    resources:
+      static-locations: file:./uploads/
+
+logging:
+  level:
+    org.hibernate.SQL: OFF
+    org.hibernate.type.descriptor.sql: OFF
+
+app:
+  frontend-domain: https://hooopex.com
+
+openai:
+  api:
+    key: ${OPENAI_API_KEY}
