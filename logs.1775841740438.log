@@ -1,0 +1,1001 @@
+2026-04-10T17:20:00.024829654Z [inf]  	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:00.024834275Z [inf]  	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:00.026355997Z [inf]  	at com.xxz.loginhouduan.LoginhouduanApplication.main(LoginhouduanApplication.java:21) ~[classes!/:na]
+2026-04-10T17:20:00.026360940Z [inf]  	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+2026-04-10T17:20:00.026363931Z [inf]  	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+2026-04-10T17:20:00.026366592Z [inf]  	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:00.026369268Z [inf]  	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:00.026372077Z [inf]  	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:00.026374971Z [inf]  	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:00.026377731Z [inf]  Caused by: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration
+2026-04-10T17:20:00.026380769Z [inf]  	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:00.026383587Z [inf]  	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:00.026386496Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:225) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:00.026389216Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:599) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:00.026392106Z [inf]  	... 25 common frames omitted
+2026-04-10T17:20:00.027616510Z [inf]  Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'MAIL_HOST' in value "${MAIL_HOST}"
+2026-04-10T17:20:00.027621780Z [inf]  	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:00.027626468Z [inf]  	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:00.027629712Z [inf]  	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:00.027632645Z [inf]  	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:00.027635495Z [inf]  	at org.springframework.core.env.AbstractPropertyResolver.resolveNestedPlaceholders(AbstractPropertyResolver.java:230) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:00.027638432Z [inf]  	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:79) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:00.027641240Z [inf]  	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:60) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:00.027643946Z [inf]  	at org.springframework.core.env.AbstractEnvironment.getProperty(AbstractEnvironment.java:594) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:00.027646779Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition$Spec.collectProperties(OnPropertyCondition.java:120) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:00.027649394Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition$Spec.access$000(OnPropertyCondition.java:85) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:00.028773885Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition.determineOutcome(OnPropertyCondition.java:71) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:00.028777782Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition.getMatchOutcome(OnPropertyCondition.java:58) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:00.028781869Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberOutcomes.getConditionOutcome(AbstractNestedCondition.java:194) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:00.028785538Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberOutcomes.<init>(AbstractNestedCondition.java:188) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:00.028789832Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberConditions.lambda$getMatchOutcomes$0(AbstractNestedCondition.java:168) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:00.028793577Z [inf]  	at java.base/java.util.Map.forEach(Map.java:733) ~[na:na]
+2026-04-10T17:20:00.028797604Z [inf]  	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1707) ~[na:na]
+2026-04-10T17:20:00.028801261Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberConditions.getMatchOutcomes(AbstractNestedCondition.java:168) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:00.028804463Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberMatchOutcomes.<init>(AbstractNestedCondition.java:78) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:00.028807761Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition.getMatchOutcome(AbstractNestedCondition.java:63) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:00.029888139Z [inf]  	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:00.029891556Z [inf]  	... 28 common frames omitted
+2026-04-10T17:20:00.029895286Z [inf]  
+2026-04-10T17:20:02.071840717Z [inf]  
+2026-04-10T17:20:02.071843302Z [inf]    .   ____          _            __ _ _
+2026-04-10T17:20:02.071845915Z [inf]   /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2026-04-10T17:20:02.071850889Z [inf]  ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2026-04-10T17:20:02.071853509Z [inf]   \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2026-04-10T17:20:02.071856533Z [inf]    '  |____| .__|_| |_|_| |_\__, | / / / /
+2026-04-10T17:20:02.071860718Z [inf]   =========|_|==============|___/=/_/_/_/
+2026-04-10T17:20:02.071863305Z [inf]   :: Spring Boot ::               (v2.6.13)
+2026-04-10T17:20:02.071865995Z [inf]  
+2026-04-10T17:20:02.282689394Z [inf]  2026-04-10 17:20:02.131  INFO 1 --- [           main] c.x.l.LoginhouduanApplication            : Starting LoginhouduanApplication using Java 21.0.2 on ed9e5a05135b with PID 1 (/app/target/loginhouduan-0.0.1-SNAPSHOT.jar started by root in /app)
+2026-04-10T17:20:02.282693597Z [inf]  2026-04-10 17:20:02.133  INFO 1 --- [           main] c.x.l.LoginhouduanApplication            : No active profile set, falling back to 1 default profile: "default"
+2026-04-10T17:20:03.044806621Z [inf]  2026-04-10 17:20:03.032  WARN 1 --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.xxz.loginhouduan.LoginhouduanApplication]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration
+2026-04-10T17:20:03.044810439Z [inf]  2026-04-10 17:20:03.040  INFO 1 --- [           main] ConditionEvaluationReportLoggingListener : 
+2026-04-10T17:20:03.044813873Z [inf]  
+2026-04-10T17:20:03.044819456Z [inf]  Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2026-04-10T17:20:03.067860616Z [inf]  2026-04-10 17:20:03.056 ERROR 1 --- [           main] o.s.boot.SpringApplication               : Application run failed
+2026-04-10T17:20:03.067867580Z [inf]  
+2026-04-10T17:20:03.067871608Z [inf]  org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.xxz.loginhouduan.LoginhouduanApplication]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration
+2026-04-10T17:20:03.067880125Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:609) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:03.067883800Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.access$800(ConfigurationClassParser.java:110) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:03.067887900Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:812) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:03.067891868Z [inf]  	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+2026-04-10T17:20:03.067895265Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:809) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:03.067899825Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:780) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:03.067903104Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:192) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:03.067906806Z [inf]  	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:03.069260947Z [inf]  	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:03.069264229Z [inf]  	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:03.069267816Z [inf]  	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:03.069271694Z [inf]  	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:03.069277104Z [inf]  	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:03.069280368Z [inf]  	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:03.069283763Z [inf]  	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:745) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:03.069287004Z [inf]  	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:420) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:03.069290500Z [inf]  	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:03.069294635Z [inf]  	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:03.069298442Z [inf]  	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:03.070495688Z [inf]  	at com.xxz.loginhouduan.LoginhouduanApplication.main(LoginhouduanApplication.java:21) ~[classes!/:na]
+2026-04-10T17:20:03.070501402Z [inf]  	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+2026-04-10T17:20:03.070504860Z [inf]  	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+2026-04-10T17:20:03.070507699Z [inf]  	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:03.070511067Z [inf]  	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:03.070513814Z [inf]  	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:03.070517896Z [inf]  	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:03.070520680Z [inf]  Caused by: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration
+2026-04-10T17:20:03.070523443Z [inf]  	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:03.070526440Z [inf]  	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:03.070529177Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:225) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:03.070531902Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:599) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:03.070534380Z [inf]  	... 25 common frames omitted
+2026-04-10T17:20:03.071894904Z [inf]  Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'MAIL_HOST' in value "${MAIL_HOST}"
+2026-04-10T17:20:03.071900264Z [inf]  	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:03.071903837Z [inf]  	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:03.071908252Z [inf]  	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:03.071912831Z [inf]  	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:03.071916645Z [inf]  	at org.springframework.core.env.AbstractPropertyResolver.resolveNestedPlaceholders(AbstractPropertyResolver.java:230) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:03.071919589Z [inf]  	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:79) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:03.071924944Z [inf]  	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:60) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:03.071929077Z [inf]  	at org.springframework.core.env.AbstractEnvironment.getProperty(AbstractEnvironment.java:594) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:03.071932316Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition$Spec.collectProperties(OnPropertyCondition.java:120) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:03.071936194Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition$Spec.access$000(OnPropertyCondition.java:85) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:03.073435911Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition.determineOutcome(OnPropertyCondition.java:71) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:03.073440530Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition.getMatchOutcome(OnPropertyCondition.java:58) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:03.073444101Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberOutcomes.getConditionOutcome(AbstractNestedCondition.java:194) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:03.073446932Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberOutcomes.<init>(AbstractNestedCondition.java:188) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:03.073449985Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberConditions.lambda$getMatchOutcomes$0(AbstractNestedCondition.java:168) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:03.073452644Z [inf]  	at java.base/java.util.Map.forEach(Map.java:733) ~[na:na]
+2026-04-10T17:20:03.073455203Z [inf]  	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1707) ~[na:na]
+2026-04-10T17:20:03.073458506Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberConditions.getMatchOutcomes(AbstractNestedCondition.java:168) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:03.073461262Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberMatchOutcomes.<init>(AbstractNestedCondition.java:78) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:03.073464250Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition.getMatchOutcome(AbstractNestedCondition.java:63) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:03.074625748Z [inf]  	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:03.074630712Z [inf]  	... 28 common frames omitted
+2026-04-10T17:20:03.074634014Z [inf]  
+2026-04-10T17:20:05.022116949Z [inf]  
+2026-04-10T17:20:05.022119900Z [inf]    .   ____          _            __ _ _
+2026-04-10T17:20:05.022123130Z [inf]   /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2026-04-10T17:20:05.022126508Z [inf]  ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2026-04-10T17:20:05.022129872Z [inf]   \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2026-04-10T17:20:05.022133722Z [inf]    '  |____| .__|_| |_|_| |_\__, | / / / /
+2026-04-10T17:20:05.022137106Z [inf]   =========|_|==============|___/=/_/_/_/
+2026-04-10T17:20:05.022139892Z [inf]   :: Spring Boot ::               (v2.6.13)
+2026-04-10T17:20:05.022144262Z [inf]  
+2026-04-10T17:20:05.054035269Z [inf]  2026-04-10 17:20:05.048  INFO 1 --- [           main] c.x.l.LoginhouduanApplication            : Starting LoginhouduanApplication using Java 21.0.2 on ed9e5a05135b with PID 1 (/app/target/loginhouduan-0.0.1-SNAPSHOT.jar started by root in /app)
+2026-04-10T17:20:05.054039703Z [inf]  2026-04-10 17:20:05.049  INFO 1 --- [           main] c.x.l.LoginhouduanApplication            : No active profile set, falling back to 1 default profile: "default"
+2026-04-10T17:20:05.901060151Z [inf]  2026-04-10 17:20:05.899  WARN 1 --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.xxz.loginhouduan.LoginhouduanApplication]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration
+2026-04-10T17:20:05.913856100Z [inf]  2026-04-10 17:20:05.908  INFO 1 --- [           main] ConditionEvaluationReportLoggingListener : 
+2026-04-10T17:20:05.913859162Z [inf]  
+2026-04-10T17:20:05.913862566Z [inf]  Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2026-04-10T17:20:05.926035394Z [inf]  2026-04-10 17:20:05.924 ERROR 1 --- [           main] o.s.boot.SpringApplication               : Application run failed
+2026-04-10T17:20:05.926044014Z [inf]  
+2026-04-10T17:20:05.926049168Z [inf]  org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.xxz.loginhouduan.LoginhouduanApplication]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration
+2026-04-10T17:20:05.926053284Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:609) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:05.926057540Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.access$800(ConfigurationClassParser.java:110) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:05.926061981Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:812) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:05.926066194Z [inf]  	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+2026-04-10T17:20:05.926070078Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:809) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:05.926074063Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:780) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:05.926079924Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:192) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:05.926083861Z [inf]  	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:05.927498115Z [inf]  	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:05.927504612Z [inf]  	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:05.927508368Z [inf]  	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:05.927512695Z [inf]  	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:05.927516915Z [inf]  	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:05.927520893Z [inf]  	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:05.927524222Z [inf]  	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:745) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:05.927527410Z [inf]  	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:420) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:05.927530681Z [inf]  	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:05.927539007Z [inf]  	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:05.927542091Z [inf]  	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:05.928835030Z [inf]  	at com.xxz.loginhouduan.LoginhouduanApplication.main(LoginhouduanApplication.java:21) ~[classes!/:na]
+2026-04-10T17:20:05.928839532Z [inf]  	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+2026-04-10T17:20:05.928842554Z [inf]  	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+2026-04-10T17:20:05.928845244Z [inf]  	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:05.928847842Z [inf]  	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:05.928850743Z [inf]  	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:05.928853635Z [inf]  	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:05.928856326Z [inf]  Caused by: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration
+2026-04-10T17:20:05.928859157Z [inf]  	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:05.928862276Z [inf]  	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:05.928864863Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:225) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:05.928867433Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:599) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:05.928870044Z [inf]  	... 25 common frames omitted
+2026-04-10T17:20:05.930294979Z [inf]  Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'MAIL_HOST' in value "${MAIL_HOST}"
+2026-04-10T17:20:05.930299132Z [inf]  	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:05.930302023Z [inf]  	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:05.930304942Z [inf]  	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:05.930308121Z [inf]  	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:05.930310841Z [inf]  	at org.springframework.core.env.AbstractPropertyResolver.resolveNestedPlaceholders(AbstractPropertyResolver.java:230) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:05.930313604Z [inf]  	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:79) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:05.930316180Z [inf]  	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:60) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:05.930319340Z [inf]  	at org.springframework.core.env.AbstractEnvironment.getProperty(AbstractEnvironment.java:594) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:05.930322351Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition$Spec.collectProperties(OnPropertyCondition.java:120) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:05.930325138Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition$Spec.access$000(OnPropertyCondition.java:85) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:05.931837142Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition.determineOutcome(OnPropertyCondition.java:71) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:05.931843401Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition.getMatchOutcome(OnPropertyCondition.java:58) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:05.931847298Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberOutcomes.getConditionOutcome(AbstractNestedCondition.java:194) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:05.931850710Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberOutcomes.<init>(AbstractNestedCondition.java:188) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:05.931858040Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberConditions.lambda$getMatchOutcomes$0(AbstractNestedCondition.java:168) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:05.931862289Z [inf]  	at java.base/java.util.Map.forEach(Map.java:733) ~[na:na]
+2026-04-10T17:20:05.931865723Z [inf]  	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1707) ~[na:na]
+2026-04-10T17:20:05.931868832Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberConditions.getMatchOutcomes(AbstractNestedCondition.java:168) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:05.931872691Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberMatchOutcomes.<init>(AbstractNestedCondition.java:78) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:05.931876581Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition.getMatchOutcome(AbstractNestedCondition.java:63) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:05.933070313Z [inf]  	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:05.933074866Z [inf]  	... 28 common frames omitted
+2026-04-10T17:20:05.933078763Z [inf]  
+2026-04-10T17:20:25.928409731Z [inf]  
+2026-04-10T17:20:25.928413904Z [inf]    .   ____          _            __ _ _
+2026-04-10T17:20:25.928417364Z [inf]   /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2026-04-10T17:20:25.928421731Z [inf]  ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2026-04-10T17:20:25.928426096Z [inf]   \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2026-04-10T17:20:25.928429779Z [inf]    '  |____| .__|_| |_|_| |_\__, | / / / /
+2026-04-10T17:20:25.928433230Z [inf]   =========|_|==============|___/=/_/_/_/
+2026-04-10T17:20:25.928437499Z [inf]   :: Spring Boot ::               (v2.6.13)
+2026-04-10T17:20:25.928441265Z [inf]  
+2026-04-10T17:20:25.928444553Z [inf]  2026-04-10 17:20:23.993  INFO 1 --- [           main] c.x.l.LoginhouduanApplication            : Starting LoginhouduanApplication using Java 21.0.2 on ed9e5a05135b with PID 1 (/app/target/loginhouduan-0.0.1-SNAPSHOT.jar started by root in /app)
+2026-04-10T17:20:25.928447876Z [inf]  2026-04-10 17:20:23.995  INFO 1 --- [           main] c.x.l.LoginhouduanApplication            : No active profile set, falling back to 1 default profile: "default"
+2026-04-10T17:20:25.928451913Z [inf]  2026-04-10 17:20:24.867  WARN 1 --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.xxz.loginhouduan.LoginhouduanApplication]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration
+2026-04-10T17:20:25.928455082Z [inf]  2026-04-10 17:20:24.876  INFO 1 --- [           main] ConditionEvaluationReportLoggingListener : 
+2026-04-10T17:20:25.928458131Z [inf]  
+2026-04-10T17:20:25.928461748Z [inf]  Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2026-04-10T17:20:25.929540598Z [inf]  2026-04-10 17:20:24.895 ERROR 1 --- [           main] o.s.boot.SpringApplication               : Application run failed
+2026-04-10T17:20:25.929545928Z [inf]  
+2026-04-10T17:20:25.929549928Z [inf]  org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.xxz.loginhouduan.LoginhouduanApplication]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration
+2026-04-10T17:20:25.929554470Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:609) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:25.929557489Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.access$800(ConfigurationClassParser.java:110) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:25.929560423Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:812) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:25.929563279Z [inf]  	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+2026-04-10T17:20:25.929566097Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:809) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:25.929568875Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:780) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:25.929571813Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:192) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:25.929574911Z [inf]  	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:25.930914044Z [inf]  	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:25.930917338Z [inf]  	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:25.930920533Z [inf]  	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:25.930923901Z [inf]  	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:25.930926882Z [inf]  	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:25.930929621Z [inf]  	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:25.930932784Z [inf]  	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:745) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:25.930936168Z [inf]  	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:420) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:25.930939707Z [inf]  	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:25.930943349Z [inf]  	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:25.930946814Z [inf]  	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:25.932203655Z [inf]  	at com.xxz.loginhouduan.LoginhouduanApplication.main(LoginhouduanApplication.java:21) ~[classes!/:na]
+2026-04-10T17:20:25.932207157Z [inf]  	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+2026-04-10T17:20:25.932210168Z [inf]  	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+2026-04-10T17:20:25.932213181Z [inf]  	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:25.932216121Z [inf]  	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:25.932219107Z [inf]  	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:25.932222121Z [inf]  	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:25.932224789Z [inf]  Caused by: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration
+2026-04-10T17:20:25.932227659Z [inf]  	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:25.932230399Z [inf]  	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:25.932233010Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:225) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:25.932235612Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:599) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:25.932238502Z [inf]  	... 25 common frames omitted
+2026-04-10T17:20:25.933608479Z [inf]  Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'MAIL_HOST' in value "${MAIL_HOST}"
+2026-04-10T17:20:25.933612104Z [inf]  	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:25.933614960Z [inf]  	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:25.933617685Z [inf]  	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:25.933620499Z [inf]  	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:25.933623408Z [inf]  	at org.springframework.core.env.AbstractPropertyResolver.resolveNestedPlaceholders(AbstractPropertyResolver.java:230) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:25.933626317Z [inf]  	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:79) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:25.933628911Z [inf]  	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:60) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:25.933631614Z [inf]  	at org.springframework.core.env.AbstractEnvironment.getProperty(AbstractEnvironment.java:594) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:25.933634185Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition$Spec.collectProperties(OnPropertyCondition.java:120) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:25.933636908Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition$Spec.access$000(OnPropertyCondition.java:85) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:25.935177066Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition.determineOutcome(OnPropertyCondition.java:71) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:25.935183484Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition.getMatchOutcome(OnPropertyCondition.java:58) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:25.935189394Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberOutcomes.getConditionOutcome(AbstractNestedCondition.java:194) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:25.935193353Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberOutcomes.<init>(AbstractNestedCondition.java:188) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:25.935200149Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberConditions.lambda$getMatchOutcomes$0(AbstractNestedCondition.java:168) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:25.935204252Z [inf]  	at java.base/java.util.Map.forEach(Map.java:733) ~[na:na]
+2026-04-10T17:20:25.935209735Z [inf]  	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1707) ~[na:na]
+2026-04-10T17:20:25.935213398Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberConditions.getMatchOutcomes(AbstractNestedCondition.java:168) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:25.935216272Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberMatchOutcomes.<init>(AbstractNestedCondition.java:78) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:25.935220498Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition.getMatchOutcome(AbstractNestedCondition.java:63) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:25.936445216Z [inf]  	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:25.936449127Z [inf]  	... 28 common frames omitted
+2026-04-10T17:20:25.936452087Z [inf]  
+2026-04-10T17:20:26.592278341Z [inf]  
+2026-04-10T17:20:26.592286575Z [inf]    .   ____          _            __ _ _
+2026-04-10T17:20:26.592291980Z [inf]   /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2026-04-10T17:20:26.592296521Z [inf]  ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2026-04-10T17:20:26.592301033Z [inf]   \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2026-04-10T17:20:26.592305959Z [inf]    '  |____| .__|_| |_|_| |_\__, | / / / /
+2026-04-10T17:20:26.592310501Z [inf]   =========|_|==============|___/=/_/_/_/
+2026-04-10T17:20:26.597261044Z [inf]   :: Spring Boot ::               (v2.6.13)
+2026-04-10T17:20:26.597267301Z [inf]  
+2026-04-10T17:20:26.674445073Z [inf]  2026-04-10 17:20:26.671  INFO 1 --- [           main] c.x.l.LoginhouduanApplication            : Starting LoginhouduanApplication using Java 21.0.2 on ed9e5a05135b with PID 1 (/app/target/loginhouduan-0.0.1-SNAPSHOT.jar started by root in /app)
+2026-04-10T17:20:26.674447864Z [inf]  2026-04-10 17:20:26.673  INFO 1 --- [           main] c.x.l.LoginhouduanApplication            : No active profile set, falling back to 1 default profile: "default"
+2026-04-10T17:20:27.611941439Z [inf]  2026-04-10 17:20:27.590  WARN 1 --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.xxz.loginhouduan.LoginhouduanApplication]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration
+2026-04-10T17:20:27.633060323Z [inf]  2026-04-10 17:20:27.628  INFO 1 --- [           main] ConditionEvaluationReportLoggingListener : 
+2026-04-10T17:20:27.633066272Z [inf]  
+2026-04-10T17:20:27.633069499Z [inf]  Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2026-04-10T17:20:27.662368620Z [inf]  2026-04-10 17:20:27.653 ERROR 1 --- [           main] o.s.boot.SpringApplication               : Application run failed
+2026-04-10T17:20:27.662374748Z [inf]  
+2026-04-10T17:20:27.662378807Z [inf]  org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.xxz.loginhouduan.LoginhouduanApplication]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration
+2026-04-10T17:20:27.662381558Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:609) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:27.662384233Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.access$800(ConfigurationClassParser.java:110) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:27.662386828Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:812) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:27.662389426Z [inf]  	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+2026-04-10T17:20:27.662392096Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:809) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:27.662394783Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:780) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:27.662397328Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:192) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:27.662400131Z [inf]  	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:27.663899597Z [inf]  	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:27.663903093Z [inf]  	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:27.663905803Z [inf]  	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:27.663908326Z [inf]  	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:27.663911758Z [inf]  	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:27.663914649Z [inf]  	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:27.663917999Z [inf]  	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:745) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:27.663920690Z [inf]  	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:420) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:27.663924182Z [inf]  	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:27.663926893Z [inf]  	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:27.663929418Z [inf]  	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:27.665438680Z [inf]  	at com.xxz.loginhouduan.LoginhouduanApplication.main(LoginhouduanApplication.java:21) ~[classes!/:na]
+2026-04-10T17:20:27.665442045Z [inf]  	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+2026-04-10T17:20:27.665445080Z [inf]  	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+2026-04-10T17:20:27.665447785Z [inf]  	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:27.665450654Z [inf]  	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:27.665453944Z [inf]  	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:27.665456841Z [inf]  	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:27.665459414Z [inf]  Caused by: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration
+2026-04-10T17:20:27.665462966Z [inf]  	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:27.665465724Z [inf]  	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:27.665468321Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:225) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:27.665471343Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:599) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:27.665473863Z [inf]  	... 25 common frames omitted
+2026-04-10T17:20:27.666798991Z [inf]  Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'MAIL_HOST' in value "${MAIL_HOST}"
+2026-04-10T17:20:27.666802659Z [inf]  	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:27.666805615Z [inf]  	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:27.666808856Z [inf]  	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:27.666811722Z [inf]  	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:27.666814565Z [inf]  	at org.springframework.core.env.AbstractPropertyResolver.resolveNestedPlaceholders(AbstractPropertyResolver.java:230) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:27.666817208Z [inf]  	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:79) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:27.666819692Z [inf]  	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:60) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:27.666823107Z [inf]  	at org.springframework.core.env.AbstractEnvironment.getProperty(AbstractEnvironment.java:594) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:27.666826182Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition$Spec.collectProperties(OnPropertyCondition.java:120) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:27.666828822Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition$Spec.access$000(OnPropertyCondition.java:85) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:27.668311001Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition.determineOutcome(OnPropertyCondition.java:71) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:27.668320236Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition.getMatchOutcome(OnPropertyCondition.java:58) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:27.668325398Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberOutcomes.getConditionOutcome(AbstractNestedCondition.java:194) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:27.668329649Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberOutcomes.<init>(AbstractNestedCondition.java:188) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:27.668333270Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberConditions.lambda$getMatchOutcomes$0(AbstractNestedCondition.java:168) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:27.668338124Z [inf]  	at java.base/java.util.Map.forEach(Map.java:733) ~[na:na]
+2026-04-10T17:20:27.668341229Z [inf]  	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1707) ~[na:na]
+2026-04-10T17:20:27.668345919Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberConditions.getMatchOutcomes(AbstractNestedCondition.java:168) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:27.668348988Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberMatchOutcomes.<init>(AbstractNestedCondition.java:78) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:27.668352011Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition.getMatchOutcome(AbstractNestedCondition.java:63) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:27.669427309Z [inf]  	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:27.669430702Z [inf]  	... 28 common frames omitted
+2026-04-10T17:20:27.669433523Z [inf]  
+2026-04-10T17:20:29.597715952Z [inf]  
+2026-04-10T17:20:29.597719388Z [inf]    .   ____          _            __ _ _
+2026-04-10T17:20:29.597722196Z [inf]   /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2026-04-10T17:20:29.597725281Z [inf]  ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2026-04-10T17:20:29.597728145Z [inf]   \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2026-04-10T17:20:29.597730927Z [inf]    '  |____| .__|_| |_|_| |_\__, | / / / /
+2026-04-10T17:20:29.597734594Z [inf]   =========|_|==============|___/=/_/_/_/
+2026-04-10T17:20:29.597738108Z [inf]   :: Spring Boot ::               (v2.6.13)
+2026-04-10T17:20:29.597740688Z [inf]  
+2026-04-10T17:20:29.678643715Z [inf]  2026-04-10 17:20:29.658  INFO 1 --- [           main] c.x.l.LoginhouduanApplication            : Starting LoginhouduanApplication using Java 21.0.2 on ed9e5a05135b with PID 1 (/app/target/loginhouduan-0.0.1-SNAPSHOT.jar started by root in /app)
+2026-04-10T17:20:29.678647538Z [inf]  2026-04-10 17:20:29.659  INFO 1 --- [           main] c.x.l.LoginhouduanApplication            : No active profile set, falling back to 1 default profile: "default"
+2026-04-10T17:20:30.564740577Z [inf]  2026-04-10 17:20:30.564  WARN 1 --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.xxz.loginhouduan.LoginhouduanApplication]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration
+2026-04-10T17:20:30.576869813Z [inf]  2026-04-10 17:20:30.572  INFO 1 --- [           main] ConditionEvaluationReportLoggingListener : 
+2026-04-10T17:20:30.576873308Z [inf]  
+2026-04-10T17:20:30.576876402Z [inf]  Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2026-04-10T17:20:30.612987815Z [inf]  2026-04-10 17:20:30.611 ERROR 1 --- [           main] o.s.boot.SpringApplication               : Application run failed
+2026-04-10T17:20:30.612995769Z [inf]  
+2026-04-10T17:20:30.613000026Z [inf]  org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.xxz.loginhouduan.LoginhouduanApplication]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration
+2026-04-10T17:20:30.613003341Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:609) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:30.613006706Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.access$800(ConfigurationClassParser.java:110) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:30.613010319Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:812) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:30.613014216Z [inf]  	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+2026-04-10T17:20:30.613018101Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:809) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:30.613023434Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:780) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:30.613027240Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:192) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:30.613030942Z [inf]  	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:30.614214411Z [inf]  	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:745) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:30.614222776Z [inf]  	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:420) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:30.614227059Z [inf]  	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:30.614228312Z [inf]  	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:30.614233575Z [inf]  	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:30.614234631Z [inf]  	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:30.614239434Z [inf]  	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:30.614240941Z [inf]  	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:30.614243814Z [inf]  	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:30.614246692Z [inf]  	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:30.614250240Z [inf]  	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:30.615351759Z [inf]  	at com.xxz.loginhouduan.LoginhouduanApplication.main(LoginhouduanApplication.java:21) ~[classes!/:na]
+2026-04-10T17:20:30.615355304Z [inf]  	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+2026-04-10T17:20:30.615359261Z [inf]  	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+2026-04-10T17:20:30.615364432Z [inf]  	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:30.615367524Z [inf]  	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:30.615370521Z [inf]  	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:30.615373379Z [inf]  	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:30.615376519Z [inf]  Caused by: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration
+2026-04-10T17:20:30.615380282Z [inf]  	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:30.615383884Z [inf]  	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:30.615387213Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:225) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:30.615390580Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:599) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:30.615393865Z [inf]  	... 25 common frames omitted
+2026-04-10T17:20:30.616833291Z [inf]  Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'MAIL_HOST' in value "${MAIL_HOST}"
+2026-04-10T17:20:30.616838042Z [inf]  	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:30.616841060Z [inf]  	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:30.616844126Z [inf]  	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:30.616847085Z [inf]  	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:30.616850119Z [inf]  	at org.springframework.core.env.AbstractPropertyResolver.resolveNestedPlaceholders(AbstractPropertyResolver.java:230) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:30.616855140Z [inf]  	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:79) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:30.616858065Z [inf]  	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:60) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:30.616861093Z [inf]  	at org.springframework.core.env.AbstractEnvironment.getProperty(AbstractEnvironment.java:594) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:30.616864131Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition$Spec.collectProperties(OnPropertyCondition.java:120) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:30.616867103Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition$Spec.access$000(OnPropertyCondition.java:85) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:30.618012612Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition.determineOutcome(OnPropertyCondition.java:71) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:30.618016618Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition.getMatchOutcome(OnPropertyCondition.java:58) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:30.618019505Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberOutcomes.getConditionOutcome(AbstractNestedCondition.java:194) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:30.618022254Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberOutcomes.<init>(AbstractNestedCondition.java:188) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:30.618025407Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberConditions.lambda$getMatchOutcomes$0(AbstractNestedCondition.java:168) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:30.618028308Z [inf]  	at java.base/java.util.Map.forEach(Map.java:733) ~[na:na]
+2026-04-10T17:20:30.618031161Z [inf]  	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1707) ~[na:na]
+2026-04-10T17:20:30.618034357Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberConditions.getMatchOutcomes(AbstractNestedCondition.java:168) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:30.618037630Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberMatchOutcomes.<init>(AbstractNestedCondition.java:78) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:30.618040707Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition.getMatchOutcome(AbstractNestedCondition.java:63) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:30.619157644Z [inf]  	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:30.619160956Z [inf]  	... 28 common frames omitted
+2026-04-10T17:20:30.619163618Z [inf]  
+2026-04-10T17:20:32.304344915Z [inf]  
+2026-04-10T17:20:32.304349599Z [inf]    .   ____          _            __ _ _
+2026-04-10T17:20:32.304353452Z [inf]   /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2026-04-10T17:20:32.304356133Z [inf]  ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2026-04-10T17:20:32.304359070Z [inf]   \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2026-04-10T17:20:32.304362037Z [inf]    '  |____| .__|_| |_|_| |_\__, | / / / /
+2026-04-10T17:20:32.304365056Z [inf]   =========|_|==============|___/=/_/_/_/
+2026-04-10T17:20:32.309691340Z [inf]   :: Spring Boot ::               (v2.6.13)
+2026-04-10T17:20:32.309695798Z [inf]  
+2026-04-10T17:20:32.492964966Z [inf]  2026-04-10 17:20:32.380  INFO 1 --- [           main] c.x.l.LoginhouduanApplication            : Starting LoginhouduanApplication using Java 21.0.2 on ed9e5a05135b with PID 1 (/app/target/loginhouduan-0.0.1-SNAPSHOT.jar started by root in /app)
+2026-04-10T17:20:32.492968201Z [inf]  2026-04-10 17:20:32.381  INFO 1 --- [           main] c.x.l.LoginhouduanApplication            : No active profile set, falling back to 1 default profile: "default"
+2026-04-10T17:20:33.271720468Z [inf]  2026-04-10 17:20:33.233  WARN 1 --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.xxz.loginhouduan.LoginhouduanApplication]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration
+2026-04-10T17:20:33.271724515Z [inf]  2026-04-10 17:20:33.241  INFO 1 --- [           main] ConditionEvaluationReportLoggingListener : 
+2026-04-10T17:20:33.271728492Z [inf]  
+2026-04-10T17:20:33.271732014Z [inf]  Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2026-04-10T17:20:33.271735339Z [inf]  2026-04-10 17:20:33.258 ERROR 1 --- [           main] o.s.boot.SpringApplication               : Application run failed
+2026-04-10T17:20:33.271738803Z [inf]  
+2026-04-10T17:20:33.271742686Z [inf]  org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.xxz.loginhouduan.LoginhouduanApplication]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration
+2026-04-10T17:20:33.271745769Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:609) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:33.271751021Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.access$800(ConfigurationClassParser.java:110) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:33.271754363Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:812) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:33.272635470Z [inf]  	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+2026-04-10T17:20:33.272640451Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:809) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:33.272643633Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:780) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:33.272646846Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:192) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:33.272649768Z [inf]  	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:33.272652585Z [inf]  	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:33.272655302Z [inf]  	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:33.272658010Z [inf]  	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:33.272661796Z [inf]  	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:33.272664562Z [inf]  	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:33.274308312Z [inf]  	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:33.274311638Z [inf]  	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:745) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:33.274315033Z [inf]  	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:420) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:33.274319101Z [inf]  	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:33.274322710Z [inf]  	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:33.274327089Z [inf]  	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:33.274331710Z [inf]  	at com.xxz.loginhouduan.LoginhouduanApplication.main(LoginhouduanApplication.java:21) ~[classes!/:na]
+2026-04-10T17:20:33.274335673Z [inf]  	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+2026-04-10T17:20:33.274339131Z [inf]  	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+2026-04-10T17:20:33.274343927Z [inf]  	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:33.274347396Z [inf]  	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:33.274351987Z [inf]  	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:33.274355087Z [inf]  	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:33.275494474Z [inf]  	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:33.275499516Z [inf]  	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:33.275505277Z [inf]  	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:33.275505567Z [inf]  Caused by: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration
+2026-04-10T17:20:33.275510429Z [inf]  	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:33.275511907Z [inf]  	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:33.275515966Z [inf]  	at org.springframework.core.env.AbstractPropertyResolver.resolveNestedPlaceholders(AbstractPropertyResolver.java:230) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:33.275517591Z [inf]  	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:33.275520774Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:225) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:33.275523495Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:599) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:33.275526729Z [inf]  	... 25 common frames omitted
+2026-04-10T17:20:33.275529637Z [inf]  Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'MAIL_HOST' in value "${MAIL_HOST}"
+2026-04-10T17:20:33.276797480Z [inf]  	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:79) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:33.276800501Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition.getMatchOutcome(OnPropertyCondition.java:58) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:33.276802755Z [inf]  	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:60) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:33.276805774Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberOutcomes.getConditionOutcome(AbstractNestedCondition.java:194) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:33.276808375Z [inf]  	at org.springframework.core.env.AbstractEnvironment.getProperty(AbstractEnvironment.java:594) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:33.276810803Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberOutcomes.<init>(AbstractNestedCondition.java:188) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:33.276813180Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition$Spec.collectProperties(OnPropertyCondition.java:120) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:33.276815330Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberConditions.lambda$getMatchOutcomes$0(AbstractNestedCondition.java:168) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:33.276817673Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition$Spec.access$000(OnPropertyCondition.java:85) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:33.276821677Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition.determineOutcome(OnPropertyCondition.java:71) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:33.277618443Z [inf]  	at java.base/java.util.Map.forEach(Map.java:733) ~[na:na]
+2026-04-10T17:20:33.277626225Z [inf]  	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1707) ~[na:na]
+2026-04-10T17:20:33.277630883Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberConditions.getMatchOutcomes(AbstractNestedCondition.java:168) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:33.277634341Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberMatchOutcomes.<init>(AbstractNestedCondition.java:78) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:33.277637208Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition.getMatchOutcome(AbstractNestedCondition.java:63) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:33.277640174Z [inf]  	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:33.277643216Z [inf]  	... 28 common frames omitted
+2026-04-10T17:20:33.277646285Z [inf]  
+2026-04-10T17:20:35.195653041Z [inf]  
+2026-04-10T17:20:35.195658394Z [inf]    .   ____          _            __ _ _
+2026-04-10T17:20:35.195662951Z [inf]   /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2026-04-10T17:20:35.195667214Z [inf]  ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2026-04-10T17:20:35.195671132Z [inf]   \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2026-04-10T17:20:35.195675051Z [inf]    '  |____| .__|_| |_|_| |_\__, | / / / /
+2026-04-10T17:20:35.195678039Z [inf]   =========|_|==============|___/=/_/_/_/
+2026-04-10T17:20:35.201127240Z [inf]   :: Spring Boot ::               (v2.6.13)
+2026-04-10T17:20:35.201134180Z [inf]  
+2026-04-10T17:20:35.235422804Z [inf]  2026-04-10 17:20:35.231  INFO 1 --- [           main] c.x.l.LoginhouduanApplication            : Starting LoginhouduanApplication using Java 21.0.2 on ed9e5a05135b with PID 1 (/app/target/loginhouduan-0.0.1-SNAPSHOT.jar started by root in /app)
+2026-04-10T17:20:35.235428066Z [inf]  2026-04-10 17:20:35.232  INFO 1 --- [           main] c.x.l.LoginhouduanApplication            : No active profile set, falling back to 1 default profile: "default"
+2026-04-10T17:20:36.149827237Z [inf]  2026-04-10 17:20:36.120  WARN 1 --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.xxz.loginhouduan.LoginhouduanApplication]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration
+2026-04-10T17:20:36.149831102Z [inf]  2026-04-10 17:20:36.128  INFO 1 --- [           main] ConditionEvaluationReportLoggingListener : 
+2026-04-10T17:20:36.149836389Z [inf]  
+2026-04-10T17:20:36.149840870Z [inf]  Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2026-04-10T17:20:36.149845182Z [inf]  2026-04-10 17:20:36.146 ERROR 1 --- [           main] o.s.boot.SpringApplication               : Application run failed
+2026-04-10T17:20:36.149849048Z [inf]  
+2026-04-10T17:20:36.149853256Z [inf]  org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.xxz.loginhouduan.LoginhouduanApplication]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration
+2026-04-10T17:20:36.149857188Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:609) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:36.149861159Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.access$800(ConfigurationClassParser.java:110) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:36.149865546Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:812) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:36.150959620Z [inf]  	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+2026-04-10T17:20:36.150964270Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:809) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:36.150967386Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:780) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:36.150970171Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:192) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:36.150974138Z [inf]  	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:36.150977018Z [inf]  	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:36.150979990Z [inf]  	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:36.150983652Z [inf]  	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:36.150986472Z [inf]  	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:36.150989509Z [inf]  	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:36.152370671Z [inf]  	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:36.152378096Z [inf]  	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:745) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:36.152383264Z [inf]  	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:420) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:36.152388272Z [inf]  	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:36.152392873Z [inf]  	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:36.152397247Z [inf]  	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:36.152401690Z [inf]  	at com.xxz.loginhouduan.LoginhouduanApplication.main(LoginhouduanApplication.java:21) ~[classes!/:na]
+2026-04-10T17:20:36.152405967Z [inf]  	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+2026-04-10T17:20:36.152409968Z [inf]  	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+2026-04-10T17:20:36.152414355Z [inf]  	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:36.152420773Z [inf]  	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:36.152425035Z [inf]  	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:36.152429297Z [inf]  	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:36.153664373Z [inf]  Caused by: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration
+2026-04-10T17:20:36.153670402Z [inf]  	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:36.153674566Z [inf]  	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:36.153678553Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:225) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:36.153683389Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:599) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:36.153687554Z [inf]  	... 25 common frames omitted
+2026-04-10T17:20:36.153691649Z [inf]  Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'MAIL_HOST' in value "${MAIL_HOST}"
+2026-04-10T17:20:36.153695434Z [inf]  	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:36.153699280Z [inf]  	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:36.153704376Z [inf]  	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:36.153708211Z [inf]  	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:36.153712916Z [inf]  	at org.springframework.core.env.AbstractPropertyResolver.resolveNestedPlaceholders(AbstractPropertyResolver.java:230) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:36.155029968Z [inf]  	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:79) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:36.155035715Z [inf]  	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:60) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:36.155039427Z [inf]  	at org.springframework.core.env.AbstractEnvironment.getProperty(AbstractEnvironment.java:594) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:36.155042718Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition$Spec.collectProperties(OnPropertyCondition.java:120) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:36.155046529Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition$Spec.access$000(OnPropertyCondition.java:85) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:36.155049925Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition.determineOutcome(OnPropertyCondition.java:71) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:36.155053767Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition.getMatchOutcome(OnPropertyCondition.java:58) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:36.155058350Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberOutcomes.getConditionOutcome(AbstractNestedCondition.java:194) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:36.155062059Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberOutcomes.<init>(AbstractNestedCondition.java:188) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:36.155065152Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberConditions.lambda$getMatchOutcomes$0(AbstractNestedCondition.java:168) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:36.156295728Z [inf]  	at java.base/java.util.Map.forEach(Map.java:733) ~[na:na]
+2026-04-10T17:20:36.156300081Z [inf]  	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1707) ~[na:na]
+2026-04-10T17:20:36.156303089Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberConditions.getMatchOutcomes(AbstractNestedCondition.java:168) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:36.156306525Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberMatchOutcomes.<init>(AbstractNestedCondition.java:78) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:36.156309647Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition.getMatchOutcome(AbstractNestedCondition.java:63) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:36.156312521Z [inf]  	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:36.156315324Z [inf]  	... 28 common frames omitted
+2026-04-10T17:20:36.156318087Z [inf]  
+2026-04-10T17:20:37.996491129Z [inf]  
+2026-04-10T17:20:37.996495830Z [inf]    .   ____          _            __ _ _
+2026-04-10T17:20:37.996499047Z [inf]   /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2026-04-10T17:20:37.996502169Z [inf]  ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2026-04-10T17:20:37.996505208Z [inf]   \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2026-04-10T17:20:37.996508301Z [inf]    '  |____| .__|_| |_|_| |_\__, | / / / /
+2026-04-10T17:20:37.996511363Z [inf]   =========|_|==============|___/=/_/_/_/
+2026-04-10T17:20:38.043477782Z [inf]   :: Spring Boot ::               (v2.6.13)
+2026-04-10T17:20:38.043482221Z [inf]  
+2026-04-10T17:20:38.087014535Z [inf]  2026-04-10 17:20:38.073  INFO 1 --- [           main] c.x.l.LoginhouduanApplication            : Starting LoginhouduanApplication using Java 21.0.2 on ed9e5a05135b with PID 1 (/app/target/loginhouduan-0.0.1-SNAPSHOT.jar started by root in /app)
+2026-04-10T17:20:38.087022563Z [inf]  2026-04-10 17:20:38.074  INFO 1 --- [           main] c.x.l.LoginhouduanApplication            : No active profile set, falling back to 1 default profile: "default"
+2026-04-10T17:20:38.977914403Z [inf]  2026-04-10 17:20:38.974  WARN 1 --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.xxz.loginhouduan.LoginhouduanApplication]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration
+2026-04-10T17:20:38.983702022Z [inf]  2026-04-10 17:20:38.983  INFO 1 --- [           main] ConditionEvaluationReportLoggingListener : 
+2026-04-10T17:20:38.983714953Z [inf]  
+2026-04-10T17:20:38.983720860Z [inf]  Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2026-04-10T17:20:39.003688256Z [inf]  2026-04-10 17:20:39.001 ERROR 1 --- [           main] o.s.boot.SpringApplication               : Application run failed
+2026-04-10T17:20:39.003691455Z [inf]  
+2026-04-10T17:20:39.003694222Z [inf]  org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.xxz.loginhouduan.LoginhouduanApplication]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration
+2026-04-10T17:20:39.003697014Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:609) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:39.003700053Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.access$800(ConfigurationClassParser.java:110) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:39.003702622Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:812) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:39.003705464Z [inf]  	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+2026-04-10T17:20:39.003708329Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:809) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:39.003711117Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:780) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:39.003713722Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:192) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:39.003716451Z [inf]  	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:39.005251228Z [inf]  	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:39.005256848Z [inf]  	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:39.005265984Z [inf]  	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:39.005269808Z [inf]  	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:39.005273767Z [inf]  	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:39.005277266Z [inf]  	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:39.005281634Z [inf]  	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:745) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:39.005285395Z [inf]  	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:420) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:39.005289472Z [inf]  	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:39.005293109Z [inf]  	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:39.005296970Z [inf]  	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:39.006742358Z [inf]  Caused by: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration
+2026-04-10T17:20:39.006750462Z [inf]  	at com.xxz.loginhouduan.LoginhouduanApplication.main(LoginhouduanApplication.java:21) ~[classes!/:na]
+2026-04-10T17:20:39.006753050Z [inf]  	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:39.006755988Z [inf]  	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+2026-04-10T17:20:39.006761934Z [inf]  	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+2026-04-10T17:20:39.006764104Z [inf]  	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:39.006767266Z [inf]  	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:39.006773084Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:225) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:39.006773221Z [inf]  	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:39.006777819Z [inf]  	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:39.006783223Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:599) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:39.006784139Z [inf]  	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:39.006789910Z [inf]  	... 25 common frames omitted
+2026-04-10T17:20:39.008193393Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition$Spec.access$000(OnPropertyCondition.java:85) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:39.008206518Z [inf]  Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'MAIL_HOST' in value "${MAIL_HOST}"
+2026-04-10T17:20:39.008210087Z [inf]  	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:39.008212938Z [inf]  	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:39.008215855Z [inf]  	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:39.008219047Z [inf]  	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:39.008221946Z [inf]  	at org.springframework.core.env.AbstractPropertyResolver.resolveNestedPlaceholders(AbstractPropertyResolver.java:230) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:39.008225018Z [inf]  	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:79) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:39.008227978Z [inf]  	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:60) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:39.008231078Z [inf]  	at org.springframework.core.env.AbstractEnvironment.getProperty(AbstractEnvironment.java:594) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:39.008235136Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition$Spec.collectProperties(OnPropertyCondition.java:120) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:39.009621789Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberConditions.getMatchOutcomes(AbstractNestedCondition.java:168) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:39.009625488Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberMatchOutcomes.<init>(AbstractNestedCondition.java:78) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:39.009629067Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition.getMatchOutcome(AbstractNestedCondition.java:63) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:39.009635052Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberConditions.lambda$getMatchOutcomes$0(AbstractNestedCondition.java:168) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:39.009638780Z [inf]  	at java.base/java.util.Map.forEach(Map.java:733) ~[na:na]
+2026-04-10T17:20:39.009642089Z [inf]  	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1707) ~[na:na]
+2026-04-10T17:20:39.009651221Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition.determineOutcome(OnPropertyCondition.java:71) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:39.009655641Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition.getMatchOutcome(OnPropertyCondition.java:58) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:39.009659979Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberOutcomes.getConditionOutcome(AbstractNestedCondition.java:194) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:39.009664089Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberOutcomes.<init>(AbstractNestedCondition.java:188) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:39.011111901Z [inf]  	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:39.011115459Z [inf]  	... 28 common frames omitted
+2026-04-10T17:20:39.011119359Z [inf]  
+2026-04-10T17:20:42.494829631Z [inf]    .   ____          _            __ _ _
+2026-04-10T17:20:42.494838589Z [inf]   /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2026-04-10T17:20:42.494841675Z [inf]  
+2026-04-10T17:20:42.494844815Z [inf]  ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2026-04-10T17:20:42.494851090Z [inf]    '  |____| .__|_| |_|_| |_\__, | / / / /
+2026-04-10T17:20:42.494851182Z [inf]   \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2026-04-10T17:20:42.494858758Z [inf]   =========|_|==============|___/=/_/_/_/
+2026-04-10T17:20:42.494861763Z [inf]  
+2026-04-10T17:20:42.494863517Z [inf]   :: Spring Boot ::               (v2.6.13)
+2026-04-10T17:20:42.494884549Z [inf]  2026-04-10 17:20:40.859  INFO 1 --- [           main] c.x.l.LoginhouduanApplication            : Starting LoginhouduanApplication using Java 21.0.2 on ed9e5a05135b with PID 1 (/app/target/loginhouduan-0.0.1-SNAPSHOT.jar started by root in /app)
+2026-04-10T17:20:42.494888795Z [inf]  2026-04-10 17:20:40.860  INFO 1 --- [           main] c.x.l.LoginhouduanApplication            : No active profile set, falling back to 1 default profile: "default"
+2026-04-10T17:20:42.495336821Z [inf]  2026-04-10 17:20:41.708  WARN 1 --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.xxz.loginhouduan.LoginhouduanApplication]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration
+2026-04-10T17:20:42.495343277Z [inf]  2026-04-10 17:20:41.717  INFO 1 --- [           main] ConditionEvaluationReportLoggingListener : 
+2026-04-10T17:20:42.495348937Z [inf]  
+2026-04-10T17:20:42.495353603Z [inf]  Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2026-04-10T17:20:42.495359166Z [inf]  2026-04-10 17:20:41.734 ERROR 1 --- [           main] o.s.boot.SpringApplication               : Application run failed
+2026-04-10T17:20:42.495364847Z [inf]  
+2026-04-10T17:20:42.495369219Z [inf]  org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.xxz.loginhouduan.LoginhouduanApplication]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration
+2026-04-10T17:20:42.495374115Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:609) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:42.495378262Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.access$800(ConfigurationClassParser.java:110) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:42.495383866Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:812) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:42.495387799Z [inf]  	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+2026-04-10T17:20:42.495392250Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:809) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:42.495396296Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:780) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:42.495400652Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:192) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:42.495405125Z [inf]  	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:42.495739958Z [inf]  	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:42.495745628Z [inf]  	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:42.495749803Z [inf]  	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:42.495754855Z [inf]  	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:42.495760211Z [inf]  	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:42.495765222Z [inf]  	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:42.495769631Z [inf]  	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:745) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:42.495774117Z [inf]  	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:420) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:42.495778767Z [inf]  	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:42.495783160Z [inf]  	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:42.495787322Z [inf]  	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:42.495791907Z [inf]  	at com.xxz.loginhouduan.LoginhouduanApplication.main(LoginhouduanApplication.java:21) ~[classes!/:na]
+2026-04-10T17:20:42.495796061Z [inf]  	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+2026-04-10T17:20:42.495800740Z [inf]  	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+2026-04-10T17:20:42.495805431Z [inf]  	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:42.495811703Z [inf]  	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:42.495815323Z [inf]  	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:42.495818516Z [inf]  	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:42.495821692Z [inf]  Caused by: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration
+2026-04-10T17:20:42.495824875Z [inf]  	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:42.495828248Z [inf]  	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:42.495832095Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:225) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:42.495839468Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:599) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:42.495844708Z [inf]  	... 25 common frames omitted
+2026-04-10T17:20:42.495847412Z [inf]  Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'MAIL_HOST' in value "${MAIL_HOST}"
+2026-04-10T17:20:42.495850207Z [inf]  	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:42.495852977Z [inf]  	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:42.495855736Z [inf]  	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:42.495858533Z [inf]  	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:42.495861992Z [inf]  	at org.springframework.core.env.AbstractPropertyResolver.resolveNestedPlaceholders(AbstractPropertyResolver.java:230) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:42.495864918Z [inf]  	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:79) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:42.495867662Z [inf]  	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:60) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:42.495870480Z [inf]  	at org.springframework.core.env.AbstractEnvironment.getProperty(AbstractEnvironment.java:594) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:42.495873182Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition$Spec.collectProperties(OnPropertyCondition.java:120) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:42.495875916Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition$Spec.access$000(OnPropertyCondition.java:85) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:42.495878688Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition.determineOutcome(OnPropertyCondition.java:71) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:42.495882687Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition.getMatchOutcome(OnPropertyCondition.java:58) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:42.495885673Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberOutcomes.getConditionOutcome(AbstractNestedCondition.java:194) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:42.495888493Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberOutcomes.<init>(AbstractNestedCondition.java:188) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:42.495891474Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberConditions.lambda$getMatchOutcomes$0(AbstractNestedCondition.java:168) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:42.495894209Z [inf]  	at java.base/java.util.Map.forEach(Map.java:733) ~[na:na]
+2026-04-10T17:20:42.495897014Z [inf]  	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1707) ~[na:na]
+2026-04-10T17:20:42.495902745Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberConditions.getMatchOutcomes(AbstractNestedCondition.java:168) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:42.495906532Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberMatchOutcomes.<init>(AbstractNestedCondition.java:78) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:42.495909660Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition.getMatchOutcome(AbstractNestedCondition.java:63) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:42.495912533Z [inf]  	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:42.495915393Z [inf]  	... 28 common frames omitted
+2026-04-10T17:20:42.495918161Z [inf]  
+2026-04-10T17:20:43.724107563Z [inf]  
+2026-04-10T17:20:43.724113131Z [inf]    .   ____          _            __ _ _
+2026-04-10T17:20:43.724116373Z [inf]   /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2026-04-10T17:20:43.724120548Z [inf]  ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2026-04-10T17:20:43.724123257Z [inf]   \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2026-04-10T17:20:43.724127157Z [inf]    '  |____| .__|_| |_|_| |_\__, | / / / /
+2026-04-10T17:20:43.724130254Z [inf]   =========|_|==============|___/=/_/_/_/
+2026-04-10T17:20:43.724132897Z [inf]   :: Spring Boot ::               (v2.6.13)
+2026-04-10T17:20:43.724135713Z [inf]  
+2026-04-10T17:20:43.807976236Z [inf]  2026-04-10 17:20:43.805  INFO 1 --- [           main] c.x.l.LoginhouduanApplication            : Starting LoginhouduanApplication using Java 21.0.2 on ed9e5a05135b with PID 1 (/app/target/loginhouduan-0.0.1-SNAPSHOT.jar started by root in /app)
+2026-04-10T17:20:43.807982656Z [inf]  2026-04-10 17:20:43.806  INFO 1 --- [           main] c.x.l.LoginhouduanApplication            : No active profile set, falling back to 1 default profile: "default"
+2026-04-10T17:20:44.709690028Z [inf]  2026-04-10 17:20:44.702  WARN 1 --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.xxz.loginhouduan.LoginhouduanApplication]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration
+2026-04-10T17:20:44.715201569Z [inf]  2026-04-10 17:20:44.711  INFO 1 --- [           main] ConditionEvaluationReportLoggingListener : 
+2026-04-10T17:20:44.715206892Z [inf]  
+2026-04-10T17:20:44.715210268Z [inf]  Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2026-04-10T17:20:44.739240745Z [inf]  2026-04-10 17:20:44.729 ERROR 1 --- [           main] o.s.boot.SpringApplication               : Application run failed
+2026-04-10T17:20:44.739248116Z [inf]  
+2026-04-10T17:20:44.739252405Z [inf]  org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.xxz.loginhouduan.LoginhouduanApplication]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration
+2026-04-10T17:20:44.739256391Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:609) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:44.739260145Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.access$800(ConfigurationClassParser.java:110) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:44.739264146Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:812) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:44.739268272Z [inf]  	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+2026-04-10T17:20:44.739271986Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:809) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:44.739275513Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:780) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:44.739279355Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:192) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:44.739283583Z [inf]  	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:44.740447412Z [inf]  	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:44.740453750Z [inf]  	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:44.740459931Z [inf]  	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:44.740463677Z [inf]  	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:44.740467615Z [inf]  	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:44.740472012Z [inf]  	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:44.740475720Z [inf]  	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:745) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:44.740481634Z [inf]  	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:420) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:44.740485197Z [inf]  	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:44.740488405Z [inf]  	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:44.740491939Z [inf]  	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:44.742036321Z [inf]  	at com.xxz.loginhouduan.LoginhouduanApplication.main(LoginhouduanApplication.java:21) ~[classes!/:na]
+2026-04-10T17:20:44.742043791Z [inf]  	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+2026-04-10T17:20:44.742047862Z [inf]  	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+2026-04-10T17:20:44.742050713Z [inf]  	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:44.742053764Z [inf]  	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:44.742057028Z [inf]  	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:44.742060238Z [inf]  	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:44.742063468Z [inf]  Caused by: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration
+2026-04-10T17:20:44.742072394Z [inf]  	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:44.742075767Z [inf]  	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:44.742079254Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:225) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:44.742082624Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:599) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:44.742086049Z [inf]  	... 25 common frames omitted
+2026-04-10T17:20:44.743426906Z [inf]  	at org.springframework.core.env.AbstractEnvironment.getProperty(AbstractEnvironment.java:594) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:44.743432042Z [inf]  Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'MAIL_HOST' in value "${MAIL_HOST}"
+2026-04-10T17:20:44.743432719Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition$Spec.collectProperties(OnPropertyCondition.java:120) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:44.743438761Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition$Spec.access$000(OnPropertyCondition.java:85) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:44.743440849Z [inf]  	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:44.743444909Z [inf]  	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:44.743447953Z [inf]  	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:44.743450890Z [inf]  	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:44.743453551Z [inf]  	at org.springframework.core.env.AbstractPropertyResolver.resolveNestedPlaceholders(AbstractPropertyResolver.java:230) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:44.743456294Z [inf]  	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:79) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:44.743459133Z [inf]  	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:60) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:44.744861906Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition.determineOutcome(OnPropertyCondition.java:71) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:44.744868501Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition.getMatchOutcome(OnPropertyCondition.java:58) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:44.744873487Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberOutcomes.getConditionOutcome(AbstractNestedCondition.java:194) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:44.744877943Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberOutcomes.<init>(AbstractNestedCondition.java:188) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:44.744882289Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberConditions.lambda$getMatchOutcomes$0(AbstractNestedCondition.java:168) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:44.744887379Z [inf]  	at java.base/java.util.Map.forEach(Map.java:733) ~[na:na]
+2026-04-10T17:20:44.744891634Z [inf]  	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1707) ~[na:na]
+2026-04-10T17:20:44.744895818Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberConditions.getMatchOutcomes(AbstractNestedCondition.java:168) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:44.744900208Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberMatchOutcomes.<init>(AbstractNestedCondition.java:78) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:44.744906852Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition.getMatchOutcome(AbstractNestedCondition.java:63) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:44.746269354Z [inf]  	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:44.746273028Z [inf]  	... 28 common frames omitted
+2026-04-10T17:20:44.746276683Z [inf]  
+2026-04-10T17:20:46.813851967Z [inf]  
+2026-04-10T17:20:46.813865171Z [inf]    .   ____          _            __ _ _
+2026-04-10T17:20:46.813870890Z [inf]   /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2026-04-10T17:20:46.813877400Z [inf]  ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2026-04-10T17:20:46.813881714Z [inf]   \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2026-04-10T17:20:46.813885395Z [inf]    '  |____| .__|_| |_|_| |_\__, | / / / /
+2026-04-10T17:20:46.813889412Z [inf]   =========|_|==============|___/=/_/_/_/
+2026-04-10T17:20:46.813893104Z [inf]   :: Spring Boot ::               (v2.6.13)
+2026-04-10T17:20:46.813896762Z [inf]  
+2026-04-10T17:20:46.897221827Z [inf]  2026-04-10 17:20:46.892  INFO 1 --- [           main] c.x.l.LoginhouduanApplication            : Starting LoginhouduanApplication using Java 21.0.2 on ed9e5a05135b with PID 1 (/app/target/loginhouduan-0.0.1-SNAPSHOT.jar started by root in /app)
+2026-04-10T17:20:46.897229198Z [inf]  2026-04-10 17:20:46.894  INFO 1 --- [           main] c.x.l.LoginhouduanApplication            : No active profile set, falling back to 1 default profile: "default"
+2026-04-10T17:20:47.784568535Z [inf]  2026-04-10 17:20:47.778  WARN 1 --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.xxz.loginhouduan.LoginhouduanApplication]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration
+2026-04-10T17:20:47.790459771Z [inf]  2026-04-10 17:20:47.788  INFO 1 --- [           main] ConditionEvaluationReportLoggingListener : 
+2026-04-10T17:20:47.790465579Z [inf]  
+2026-04-10T17:20:47.790471001Z [inf]  Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2026-04-10T17:20:47.807167257Z [inf]  2026-04-10 17:20:47.806 ERROR 1 --- [           main] o.s.boot.SpringApplication               : Application run failed
+2026-04-10T17:20:47.807173682Z [inf]  
+2026-04-10T17:20:47.807177480Z [inf]  org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.xxz.loginhouduan.LoginhouduanApplication]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration
+2026-04-10T17:20:47.807180826Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:609) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:47.807186125Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.access$800(ConfigurationClassParser.java:110) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:47.807189515Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:812) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:47.807194562Z [inf]  	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+2026-04-10T17:20:47.807197643Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:809) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:47.807201077Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:780) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:47.807204157Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:192) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:47.807208955Z [inf]  	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:47.808211980Z [inf]  	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:47.808218341Z [inf]  	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:47.808221575Z [inf]  	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:47.808225215Z [inf]  	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:47.808228602Z [inf]  	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:47.808233608Z [inf]  	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:47.808236731Z [inf]  	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:745) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:47.808240140Z [inf]  	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:420) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:47.808243834Z [inf]  	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:47.808247256Z [inf]  	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:47.808250541Z [inf]  	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:47.809091691Z [inf]  	at com.xxz.loginhouduan.LoginhouduanApplication.main(LoginhouduanApplication.java:21) ~[classes!/:na]
+2026-04-10T17:20:47.809099182Z [inf]  	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+2026-04-10T17:20:47.809106895Z [inf]  	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+2026-04-10T17:20:47.809111718Z [inf]  	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:47.809116144Z [inf]  	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:47.809120748Z [inf]  	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:47.809128476Z [inf]  	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:47.809132977Z [inf]  Caused by: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration
+2026-04-10T17:20:47.809137263Z [inf]  	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:47.809141763Z [inf]  	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:47.809145963Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:225) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:47.809150553Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:599) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:47.809154897Z [inf]  	... 25 common frames omitted
+2026-04-10T17:20:47.809962619Z [inf]  Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'MAIL_HOST' in value "${MAIL_HOST}"
+2026-04-10T17:20:47.809967564Z [inf]  	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:47.809977097Z [inf]  	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:47.809980497Z [inf]  	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:47.809984022Z [inf]  	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:47.809989202Z [inf]  	at org.springframework.core.env.AbstractPropertyResolver.resolveNestedPlaceholders(AbstractPropertyResolver.java:230) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:47.809993352Z [inf]  	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:79) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:47.809997739Z [inf]  	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:60) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:47.810001295Z [inf]  	at org.springframework.core.env.AbstractEnvironment.getProperty(AbstractEnvironment.java:594) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:47.810005181Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition$Spec.collectProperties(OnPropertyCondition.java:120) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:47.810009614Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition$Spec.access$000(OnPropertyCondition.java:85) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:47.811000637Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition.determineOutcome(OnPropertyCondition.java:71) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:47.811001064Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberConditions.getMatchOutcomes(AbstractNestedCondition.java:168) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:47.811007775Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberMatchOutcomes.<init>(AbstractNestedCondition.java:78) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:47.811007874Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition.getMatchOutcome(OnPropertyCondition.java:58) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:47.811013353Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition.getMatchOutcome(AbstractNestedCondition.java:63) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:47.811014767Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberOutcomes.getConditionOutcome(AbstractNestedCondition.java:194) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:47.811017728Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberOutcomes.<init>(AbstractNestedCondition.java:188) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:47.811020651Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberConditions.lambda$getMatchOutcomes$0(AbstractNestedCondition.java:168) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:47.811023808Z [inf]  	at java.base/java.util.Map.forEach(Map.java:733) ~[na:na]
+2026-04-10T17:20:47.811026674Z [inf]  	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1707) ~[na:na]
+2026-04-10T17:20:47.812246074Z [inf]  	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:47.812249824Z [inf]  	... 28 common frames omitted
+2026-04-10T17:20:47.812252774Z [inf]  
+2026-04-10T17:20:49.697696481Z [inf]  
+2026-04-10T17:20:49.697701453Z [inf]    .   ____          _            __ _ _
+2026-04-10T17:20:49.697704995Z [inf]   /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2026-04-10T17:20:49.697708396Z [inf]  ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2026-04-10T17:20:49.697711571Z [inf]   \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2026-04-10T17:20:49.697714563Z [inf]    '  |____| .__|_| |_|_| |_\__, | / / / /
+2026-04-10T17:20:49.697717437Z [inf]   =========|_|==============|___/=/_/_/_/
+2026-04-10T17:20:49.697720633Z [inf]   :: Spring Boot ::               (v2.6.13)
+2026-04-10T17:20:49.697723687Z [inf]  
+2026-04-10T17:20:49.697726661Z [inf]  2026-04-10 17:20:49.665  INFO 1 --- [           main] c.x.l.LoginhouduanApplication            : Starting LoginhouduanApplication using Java 21.0.2 on ed9e5a05135b with PID 1 (/app/target/loginhouduan-0.0.1-SNAPSHOT.jar started by root in /app)
+2026-04-10T17:20:49.697729921Z [inf]  2026-04-10 17:20:49.667  INFO 1 --- [           main] c.x.l.LoginhouduanApplication            : No active profile set, falling back to 1 default profile: "default"
+2026-04-10T17:20:50.695428073Z [inf]  Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2026-04-10T17:20:50.695435073Z [inf]  2026-04-10 17:20:50.590 ERROR 1 --- [           main] o.s.boot.SpringApplication               : Application run failed
+2026-04-10T17:20:50.695439570Z [inf]  
+2026-04-10T17:20:50.695443522Z [inf]  org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.xxz.loginhouduan.LoginhouduanApplication]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration
+2026-04-10T17:20:50.695447084Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:609) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:50.695450711Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.access$800(ConfigurationClassParser.java:110) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:50.695454166Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:812) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:50.695527400Z [inf]  2026-04-10 17:20:50.566  WARN 1 --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.xxz.loginhouduan.LoginhouduanApplication]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration
+2026-04-10T17:20:50.695530906Z [inf]  2026-04-10 17:20:50.574  INFO 1 --- [           main] ConditionEvaluationReportLoggingListener : 
+2026-04-10T17:20:50.695535429Z [inf]  
+2026-04-10T17:20:50.695610159Z [inf]  	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+2026-04-10T17:20:50.695614893Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:809) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:50.695628369Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:780) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:50.695631403Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:192) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:50.695634301Z [inf]  	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:50.695637230Z [inf]  	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:50.695641640Z [inf]  	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:50.695644374Z [inf]  	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:50.695648016Z [inf]  	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:50.695650718Z [inf]  	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:50.696722432Z [inf]  	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:50.696726968Z [inf]  	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:745) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:50.696732635Z [inf]  	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:420) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:50.696736759Z [inf]  	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:50.696739894Z [inf]  	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:50.696743569Z [inf]  	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:50.696747086Z [inf]  	at com.xxz.loginhouduan.LoginhouduanApplication.main(LoginhouduanApplication.java:21) ~[classes!/:na]
+2026-04-10T17:20:50.696750695Z [inf]  	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+2026-04-10T17:20:50.696754101Z [inf]  	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+2026-04-10T17:20:50.696757812Z [inf]  	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:50.696761515Z [inf]  	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:50.696764837Z [inf]  	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:50.696767920Z [inf]  	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:50.698012841Z [inf]  Caused by: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration
+2026-04-10T17:20:50.698019320Z [inf]  	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:50.698023349Z [inf]  	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:50.698027346Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:225) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:50.698030988Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:599) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:50.698037559Z [inf]  	... 25 common frames omitted
+2026-04-10T17:20:50.698041843Z [inf]  Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'MAIL_HOST' in value "${MAIL_HOST}"
+2026-04-10T17:20:50.698045740Z [inf]  	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:50.698049492Z [inf]  	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:50.698053229Z [inf]  	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:50.698058218Z [inf]  	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:50.698061672Z [inf]  	at org.springframework.core.env.AbstractPropertyResolver.resolveNestedPlaceholders(AbstractPropertyResolver.java:230) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:50.699088863Z [inf]  	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:79) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:50.699092879Z [inf]  	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:60) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:50.699095668Z [inf]  	at org.springframework.core.env.AbstractEnvironment.getProperty(AbstractEnvironment.java:594) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:50.699098440Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition$Spec.collectProperties(OnPropertyCondition.java:120) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:50.699101073Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition$Spec.access$000(OnPropertyCondition.java:85) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:50.699103903Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition.determineOutcome(OnPropertyCondition.java:71) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:50.699110801Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition.getMatchOutcome(OnPropertyCondition.java:58) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:50.699113594Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberOutcomes.getConditionOutcome(AbstractNestedCondition.java:194) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:50.699116177Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberOutcomes.<init>(AbstractNestedCondition.java:188) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:50.699118851Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberConditions.lambda$getMatchOutcomes$0(AbstractNestedCondition.java:168) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:50.700528472Z [inf]  	at java.base/java.util.Map.forEach(Map.java:733) ~[na:na]
+2026-04-10T17:20:50.700534143Z [inf]  	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1707) ~[na:na]
+2026-04-10T17:20:50.700539666Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberConditions.getMatchOutcomes(AbstractNestedCondition.java:168) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:50.700543488Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberMatchOutcomes.<init>(AbstractNestedCondition.java:78) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:50.700547117Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition.getMatchOutcome(AbstractNestedCondition.java:63) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:50.700550809Z [inf]  	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:50.700555572Z [inf]  	... 28 common frames omitted
+2026-04-10T17:20:50.700559243Z [inf]  
+2026-04-10T17:20:52.328755885Z [inf]  
+2026-04-10T17:20:52.328760875Z [inf]    .   ____          _            __ _ _
+2026-04-10T17:20:52.328764597Z [inf]   /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2026-04-10T17:20:52.328768343Z [inf]  ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2026-04-10T17:20:52.328771958Z [inf]   \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2026-04-10T17:20:52.328775633Z [inf]    '  |____| .__|_| |_|_| |_\__, | / / / /
+2026-04-10T17:20:52.328780022Z [inf]   =========|_|==============|___/=/_/_/_/
+2026-04-10T17:20:52.328785156Z [inf]   :: Spring Boot ::               (v2.6.13)
+2026-04-10T17:20:52.328788883Z [inf]  
+2026-04-10T17:20:52.394121476Z [inf]  2026-04-10 17:20:52.390  INFO 1 --- [           main] c.x.l.LoginhouduanApplication            : Starting LoginhouduanApplication using Java 21.0.2 on ed9e5a05135b with PID 1 (/app/target/loginhouduan-0.0.1-SNAPSHOT.jar started by root in /app)
+2026-04-10T17:20:52.394124975Z [inf]  2026-04-10 17:20:52.392  INFO 1 --- [           main] c.x.l.LoginhouduanApplication            : No active profile set, falling back to 1 default profile: "default"
+2026-04-10T17:20:53.206797964Z [inf]  2026-04-10 17:20:53.205  WARN 1 --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.xxz.loginhouduan.LoginhouduanApplication]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration
+2026-04-10T17:20:53.242562183Z [inf]  2026-04-10 17:20:53.240  INFO 1 --- [           main] ConditionEvaluationReportLoggingListener : 
+2026-04-10T17:20:53.242566866Z [inf]  
+2026-04-10T17:20:53.242569999Z [inf]  Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2026-04-10T17:20:53.268956686Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:809) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:53.268964011Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:780) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:53.268967787Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:192) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:53.268971097Z [inf]  	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:53.268978785Z [inf]  2026-04-10 17:20:53.262 ERROR 1 --- [           main] o.s.boot.SpringApplication               : Application run failed
+2026-04-10T17:20:53.268981522Z [inf]  
+2026-04-10T17:20:53.268984214Z [inf]  org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.xxz.loginhouduan.LoginhouduanApplication]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration
+2026-04-10T17:20:53.268986898Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:609) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:53.268989521Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.access$800(ConfigurationClassParser.java:110) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:53.268992322Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:812) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:53.268994974Z [inf]  	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+2026-04-10T17:20:53.270001721Z [inf]  	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:53.270004856Z [inf]  	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:53.270007741Z [inf]  	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:53.270010611Z [inf]  	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:53.270014010Z [inf]  	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:53.270016988Z [inf]  	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:53.270019924Z [inf]  	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:745) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:53.270023321Z [inf]  	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:420) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:53.270026831Z [inf]  	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:53.270029804Z [inf]  	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:53.270032590Z [inf]  	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:53.271364584Z [inf]  	at com.xxz.loginhouduan.LoginhouduanApplication.main(LoginhouduanApplication.java:21) ~[classes!/:na]
+2026-04-10T17:20:53.271373574Z [inf]  	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+2026-04-10T17:20:53.271377063Z [inf]  	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+2026-04-10T17:20:53.271381927Z [inf]  	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:53.271385496Z [inf]  	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:53.271391587Z [inf]  	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:53.271395224Z [inf]  	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88) ~[loginhouduan-0.0.1-SNAPSHOT.jar:na]
+2026-04-10T17:20:53.271398701Z [inf]  Caused by: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration
+2026-04-10T17:20:53.271403087Z [inf]  	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:53.271407390Z [inf]  	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:53.271411312Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:225) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:53.271414499Z [inf]  	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:599) ~[spring-context-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:53.271417708Z [inf]  	... 25 common frames omitted
+2026-04-10T17:20:53.272869880Z [inf]  Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'MAIL_HOST' in value "${MAIL_HOST}"
+2026-04-10T17:20:53.272873778Z [inf]  	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:53.272876843Z [inf]  	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:53.272879953Z [inf]  	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:53.272883419Z [inf]  	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:53.272886729Z [inf]  	at org.springframework.core.env.AbstractPropertyResolver.resolveNestedPlaceholders(AbstractPropertyResolver.java:230) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:53.272889961Z [inf]  	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:79) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:53.272893468Z [inf]  	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:60) ~[spring-boot-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:53.272899241Z [inf]  	at org.springframework.core.env.AbstractEnvironment.getProperty(AbstractEnvironment.java:594) ~[spring-core-5.3.23.jar!/:5.3.23]
+2026-04-10T17:20:53.272903112Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition$Spec.collectProperties(OnPropertyCondition.java:120) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:53.272906417Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition$Spec.access$000(OnPropertyCondition.java:85) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:53.274055653Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition.determineOutcome(OnPropertyCondition.java:71) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:53.274059294Z [inf]  	at org.springframework.boot.autoconfigure.condition.OnPropertyCondition.getMatchOutcome(OnPropertyCondition.java:58) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:53.274062326Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberOutcomes.getConditionOutcome(AbstractNestedCondition.java:194) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:53.274066762Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberOutcomes.<init>(AbstractNestedCondition.java:188) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:53.274070094Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberConditions.lambda$getMatchOutcomes$0(AbstractNestedCondition.java:168) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:53.274073394Z [inf]  	at java.base/java.util.Map.forEach(Map.java:733) ~[na:na]
+2026-04-10T17:20:53.274076352Z [inf]  	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1707) ~[na:na]
+2026-04-10T17:20:53.274079045Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberConditions.getMatchOutcomes(AbstractNestedCondition.java:168) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:53.274083816Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition$MemberMatchOutcomes.<init>(AbstractNestedCondition.java:78) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:53.274087622Z [inf]  	at org.springframework.boot.autoconfigure.condition.AbstractNestedCondition.getMatchOutcome(AbstractNestedCondition.java:63) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:53.275202448Z [inf]  	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-2.6.13.jar!/:2.6.13]
+2026-04-10T17:20:53.275205454Z [inf]  	... 28 common frames omitted
+2026-04-10T17:20:53.275208596Z [inf]  
