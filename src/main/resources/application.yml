@@ -10,10 +10,7 @@ spring:
     url: jdbc:${DB_URL}
     username: ${DB_USERNAME}
     password: ${DB_PASSWORD}
-    driver-class-name: org.postgresql.Driver
-    hikari:
-      connection-timeout: 30000
-      maximum-pool-size: 10
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
   mail:
     host: ${MAIL_HOST}
