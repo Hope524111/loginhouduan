@@ -93,15 +93,37 @@ public class OpenAIService {
                 // Parse the MiniMax response
                 JsonObject jsonResponse = new com.google.gson.JsonParser().parse(result.toString()).getAsJsonObject();
 
+                // Debug: print full response
+                System.out.println("MiniMax Full Response: " + jsonResponse.toString());
+
                 // Check for error in response
                 if (jsonResponse.has("error")) {
                     String errorMsg = jsonResponse.getAsJsonObject("error").get("message").getAsString();
                     return "API Error: " + errorMsg;
                 }
 
+                // Check for base_resp error (MiniMax specific)
+                if (jsonResponse.has("base_resp")) {
+                    JsonObject baseResp = jsonResponse.getAsJsonObject("base_resp");
+                    int statusCode = baseResp.get("status_code").getAsInt();
+                    String statusMsg = baseResp.get("status_msg").getAsString();
+                    if (statusCode != 0) {
+                        return "API Error: " + statusMsg;
+                    }
+                }
+
                 // MiniMax uses "choices" array
-                JsonArray choices = jsonResponse.getAsJsonArray("choices");
-                if (choices == null || choices.size() == 0) {
+                if (!jsonResponse.has("choices")) {
+                    return "No response from AI. Please try again.";
+                }
+
+                JsonElement choicesElement = jsonResponse.get("choices");
+                if (choicesElement == null || choicesElement.isJsonNull() || !choicesElement.isJsonArray()) {
+                    return "No response from AI. Please try again.";
+                }
+
+                JsonArray choices = choicesElement.getAsJsonArray();
+                if (choices.isEmpty()) {
                     return "No response from AI. Please try again.";
                 }
 
