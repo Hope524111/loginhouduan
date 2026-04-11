@@ -87,10 +87,25 @@ public class OpenAIService {
                     result.append(line);
                 }
 
+                // Debug: print raw response
+                System.out.println("MiniMax Raw Response: " + result.toString());
+
                 // Parse the MiniMax response
                 JsonObject jsonResponse = new com.google.gson.JsonParser().parse(result.toString()).getAsJsonObject();
-                String assistantMessage = jsonResponse
-                        .getAsJsonArray("choices")
+
+                // Check for error in response
+                if (jsonResponse.has("error")) {
+                    String errorMsg = jsonResponse.getAsJsonObject("error").get("message").getAsString();
+                    return "API Error: " + errorMsg;
+                }
+
+                // MiniMax uses "choices" array
+                JsonArray choices = jsonResponse.getAsJsonArray("choices");
+                if (choices == null || choices.size() == 0) {
+                    return "No response from AI. Please try again.";
+                }
+
+                String assistantMessage = choices
                         .get(0)
                         .getAsJsonObject()
                         .get("message")
