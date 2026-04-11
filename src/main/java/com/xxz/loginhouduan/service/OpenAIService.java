@@ -63,7 +63,7 @@ public class OpenAIService {
 
             // Prepare request body for MiniMax API
             JsonObject requestBody = new JsonObject();
-            requestBody.addProperty("model", "M2-her");
+            requestBody.addProperty("model", "abab5.5-chat");
             requestBody.addProperty("max_completion_tokens", 2048);
             requestBody.addProperty("temperature", 1.0);
             requestBody.addProperty("top_p", 0.95);
