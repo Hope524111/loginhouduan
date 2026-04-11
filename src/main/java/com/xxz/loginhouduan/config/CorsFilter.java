@@ -18,7 +18,7 @@ public class CorsFilter implements Filter {
         HttpServletResponse response = (HttpServletResponse) res;
 
         String origin = request.getHeader("Origin");
-        if ("https://hope52411.tech".equals(origin) || "https://www.hope52411.tech".equals(origin)) {
+        if ("https://hooopex.com".equals(origin) || "https://www.hooopex.com".equals(origin)) {
             response.setHeader("Access-Control-Allow-Origin", origin);
         }
 
