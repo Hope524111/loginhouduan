@@ -10,7 +10,10 @@ public class SysUserEntity implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private Long id;
+
+    @TableField("login_name")
     private String loginName;
+
     private String email;
     private String password;
 
