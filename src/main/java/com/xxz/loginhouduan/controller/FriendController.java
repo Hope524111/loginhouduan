@@ -87,6 +87,9 @@ public class FriendController {
     public List<Map<String, Object>> getFriends(@RequestParam String userName) {
         SysUserEntity user = sysUserMapper.selectOne(
                 new QueryWrapper<SysUserEntity>().eq("login_name", userName));
+        if (user == null) {
+            throw new RuntimeException("User not found: " + userName);
+        }
         return friendRelationMapper.getFriends(user.getId());
     }
 }
